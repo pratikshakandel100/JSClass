@@ -112,3 +112,22 @@ fruits.forEach(
     (fruit,index) => console.log(index + ": " + fruit)
 )
 fruits.forEach((fruit)=> console.log(fruit.toUpperCase()));
+
+//map
+let newFruit = fruits.map((fruit)=>{return fruit.toLowerCase()})
+console.log(newFruit)
+
+const newFruits = fruits.map((fruit, index)=>{
+   return `<li id = "${index}>${fruit}</>`
+})
+console.log(newFruits)
+
+const filterFruit = fruits.filter((fruit)=>{
+    if(fruit.length>6){
+        return fruit
+    }
+})
+console.log(filterFruit)
+
+const reduceFruit = fruits.reduce((count)=> count+1)
+console.log(reduceFruit)
